@@ -1,0 +1,572 @@
+<html> 
+    <style>
+        
+        :root {
+            --page-padding-left: 33px;
+        }
+        html { box-sizing: border-box;
+        scroll-behavior: smooth;}
+    
+        * { box-sizing: inherit; }
+        body {
+            margin:0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: #99BA99;
+            padding: 8px var(--page-padding-left)
+        }
+        .Logo{
+            width: 85px;
+            height: 85px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        header ul {
+            margin-bottom: 0;
+        }
+        .classname {
+            border: 1px solid red;
+        }
+
+        .paddingContainer {
+            padding: 40px var(--page-padding-left);
+        }
+
+        .paddingleft {
+            padding-left: 30px;
+        }
+        .paddingright {
+            padding-right: 50px;
+        }
+    
+        #SlideshowContainer {
+           color: aliceblue;
+            height: 447px;
+            width: 100%;
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Line {
+            background-color:#4D5061; 
+            height: 8px; 
+            width: 100%;  
+        }
+        .Saharah-Introduction {
+            /* margin-top: 60px; */
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 110%;
+            color: black ;
+            min-width: 410px;
+            position:initial;
+        }
+    
+        
+        .inline50 {
+            border: 1px solid rgba(255, 0, 0, 0.256);
+            display: inline-block;
+            width: 49%;
+            box-sizing: border-box;
+        }
+        .infoArea {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            height:450px;
+            min-width: 800px;
+        }
+        .interactiveArea {
+            display: flex;
+            /* grid-template-columns: repeat(2, 50%); */
+            background-color: rgba(18, 30, 42, 0.87);
+        }
+        .Dropdown {
+            height: 447px;
+            width: 50%;
+        }
+        .TextBox {
+            background-color:black ;
+            width: 315px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+            margin-left: 25%;
+            position:relative;
+            top:-140px;
+            left:-25px;
+            font-size: 20px;
+            padding: 30px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .Design {
+            background-color: #7F636E;
+            height: 450px;
+            width: 85%;
+            margin: 15px;
+            border-radius: 10px;
+        }
+        @font-face {
+            font-family: header-text;
+            src: url(./fonts/KOMIKAX_.ttf);
+            font-weight: 700;
+        }
+        .Orange-Cube {
+            background-color: #FFD498;
+            width: fit-content;
+            border-radius: 12px;
+            padding-inline: 8%;
+            padding-block: 2%;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-family: header-text;
+            font-size: 85%;
+            
+        }
+        .photo {
+            background-color: #CACAAA;
+            height: 450px;
+            width: fit-content;
+            position:relative; 
+            margin-left: 25%;
+            bottom: 95px;
+            padding: 8px;
+            margin-top: 15%;
+        }
+        .Projects{
+        background-color: #99BA99;
+        padding: 30px;
+        position: relative;
+        
+        }
+
+        .Popart {
+            background-color: 364742;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Art {
+            height: 490px; 
+            display: flex;
+            justify-content: center;
+        }
+        .Art-title {
+            color: burlywood;
+            font-size: 121px;
+            display: flex;
+            justify-content: center;
+        }
+        .Section-menu {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            font-size:30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            justify-content: space-around;
+            position: sticky;
+            inset: 0;
+            background-color: #99BA99;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            grid-column: 1/7;
+        }
+        .Section-menu ul {
+            list-style-type: none;
+        }
+        .Section-Link {
+            color: black;
+            text-decoration: none;
+            position:relative;
+            white-space: nowrap;
+
+        }
+        .Section-Link:hover{
+            text-decoration: underline;
+
+        }
+        .Section-Link:hover .menu-image{
+            display: block;
+
+        }
+        .menu-image {
+            position: absolute;
+            left: -1.3em;
+            display: none;
+        }
+        .Project-Type-Title {
+            grid-column: 1/7;
+        }
+        .project-type-link{
+            grid-column: 1/7;
+            position: relative;
+            top: -40px;
+        }
+
+        
+        .inner-wrapper{
+            margin: 0 auto;
+            
+        }
+        .Project {
+            grid-column: 1 / 7;
+        }
+        .Artwork {
+            height: 300px;
+            background-color: aliceblue;
+        }
+
+        @media (min-width: 800px) {
+            .inner-wrapper{
+                max-width: 640px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .inner-wrapper{
+                max-width: 1200px;
+            }
+            .Project {
+                display: contents
+            }
+            .Description {
+                grid-column: 1 / 3;
+
+            }
+
+
+            .Artwork {
+                grid-column: 3 / 7;
+            }
+            .Project:nth-of-type(2n) .Artwork{
+                grid-column: 1 / 5;
+            }
+            .Project:nth-of-type(2n) .Description {
+                grid-column: 5 / 7;
+            }
+            
+        }
+
+        .Projects .inner-wrapper {
+            display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         gap: 20px;
+        grid-auto-flow: dense;
+        margin-bottom: 20px;
+        }
+    
+    
+    </style>
+    <body>
+        <header>
+            <div class="inner-wrapper">
+            <!-- home:image icon and anything else needed -->
+            <a href="">
+                <img src="pictures/Logo.png" alt="Logo" class="Logo">
+                <!-- <img alt="Saharah Ortiz"/> -->
+            </a> 
+            </div>
+        </header>
+  <div class="Line">
+  </div>
+<!-- focal point art -->
+ <!-- Add more art for point art (Needs a better background - need more art) -->
+<section class="Popart">
+    <div class="Art-title">
+        Portfolio
+     </div>
+    <div class="Art">
+        <img src="pictures/file.png" alt="Art" height="100%">
+    </div>
+</section>
+            <section><div><img /></div></section>
+ <!-- About me -->
+
+ <section class="paddingContainer">
+    <div class="infoArea inner-wrapper">
+        <div class="Saharah-Introduction">
+            <section class="Orange-Cube">
+            <ul>
+            <a href="https://www.linkedin.com/in/saharah-ortiz-1a85b0259/" target="_blank">LinkedIn: Saharah Ortiz</a>
+        </ul>
+    </section>
+   
+            <h2 >Hello I'm Saharah</h2>
+            <h3>Background information:</h3>
+            <div></div>
+            <p>I am an mixed cultural artist around many fields such as Studio Art, Graphic Design and Animation (GIFS). I also do many other things such as music, Photography, Modeling and different forms of acting. 
+                 I've built many experiences interning at corpatiions such as Comcast and Temple while also being in many programs. Ultimatly, I've been awards for many things related around art, academics, helping my community and more.
+            </p>
+        </div>
+        
+             
+            <div class="photo"> <img height="99%" src="pictures/Unknown.jpeg" alt="Image-of-me">
+             </div>
+             <div class="padding-left">
+            </div>
+           
+              <p class="TextBox" >
+                <strong>Contact:
+                ortizsaharah@gmail.com
+            </p></strong>
+             
+            
+        
+        </section>
+        </div>
+    </div>
+</section>
+        </section>
+        <div class="BlackCube">
+        </div>
+        
+    
+
+        <div
+         class="Line">
+        </div>
+        <section class="Projects"> 
+            <div class="inner-wrapper">
+                
+            <menu class="Section-menu" >
+                <ul style="display: contents;">
+                    <li> 
+                        <a class="Section-Link" href="#Illustration">
+                            <div class="menu-image"> 
+                                <img height="30px" src="pictures/Cat.png" alt="Cat-Photo">
+                            </div>
+                            <span>
+                                Illustration 
+                            </span>
+                        </a>
+
+                    </li>
+                    <li> 
+                        <a  class="Section-Link" href="#Graphic-Design">
+                            <div class="menu-image">
+                                <img height="30px" src="pictures/Dog.png" alt="Dog-Photo" >
+                            </div>
+                            <span>
+                                Graphic Design
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  class="Section-Link" href="#Photography">
+                            <div class="menu-image"> 
+                                <img height="30px" src="pictures/Girl.png" alt="Photo">
+                            </div>
+                            <span>
+                                Photography
+                        </span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a  class="Section-Link" href="#Acting">
+                            <div class="menu-image">
+                                <img height="30px" src="pictures/Cat.png" alt="Cat-Photo">
+                            </div>
+                            <span>
+                                Acting
+                        </span>
+                        </a>
+                    </li>
+                        <a  class="Section-Link" href="#Studio-Art">
+                            <div class="menu-image">
+                                <img height="30px" src="pictures/Dog.png" alt="Dog-Photo" >
+                            </div>
+                            <span>
+                             Studio Art
+                        </span>
+                        </a>
+                    </li>
+                    
+            </menu>
+        
+                <a id="Illustration" class="project-type-link"></a>
+                <h2 class="Project-Type-Title">
+                    Illustration
+                </h2>
+            <div class="Project">
+                <div class="Description">
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <div class="Project">
+                <div class="Description"> 
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <div class="Project">
+                <div class="Description">
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <div class="Project">
+                <div class="Description">
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <div class="Project">
+                <div class="Description">
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <div class="Project">
+                <div class="Description">
+                    <h3>title of art</h3>
+                    <p>desciption</p>
+                </div>
+                <div class="Artwork"></div>
+            </div>
+            <a id="Graphic-Design" class="project-type-link"></a>
+            <h2 class="Project-Type-Title">
+                Graphic Design
+            </h2>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description"> 
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <a id="Photography" class="project-type-link"></a>
+                <h2 class="Project-Type-Title">
+                    Photography
+                </h2>
+                    <div class="Project">
+                        <div class="Description">
+                            <h3>title of art</h3>
+                            <p>desciption</p>
+                        </div>
+                        <div class="Artwork"></div>
+                    </div>
+                    <div class="Project">
+                        <div class="Description">
+                            <h3>title of art</h3>
+                            <p>desciption</p>
+                        </div>
+                        <div class="Artwork"></div>
+                    </div>
+                    <div class="Project">
+                        <div class="Description">
+                            <h3>title of art</h3>
+                            <p>desciption</p>
+                        </div>
+                        <div class="Artwork"></div>
+                    </div>
+                    <a id="Acting" class="project-type-link"></a>
+                    <h2 class="Project-Type-Title">
+                        Acting
+                    </h2>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <a id="Studio-Art" class="project-type-link"></a>
+                <h2 class="Project-Type-Title">
+                    Studio Art
+                </h2>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+                <div class="Project">
+                    <div class="Description">
+                        <h3>title of art</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="Artwork"></div>
+                </div>
+            </div>
+        </section>
+        <div class="Line">
+                    
+        </div>
+</div>
+    </body>
+</html>
+
+<!-- 
+-Saharah Ortiz
+    -Hello I'm Saharah
+        -Contact
+    -Other links
+ -->
