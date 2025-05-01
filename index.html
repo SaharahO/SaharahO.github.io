@@ -214,11 +214,11 @@
             
         }
         .Project {
-            grid-column: 1 / 7;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
         }
         .Artwork {
             height: 300px;
-            background-color: aliceblue;
         }
 
         @media (min-width: 800px) {
@@ -231,32 +231,18 @@
             .inner-wrapper{
                 max-width: 1200px;
             }
-            .Project {
-                display: contents
-            }
+            /* .Project {
+                /* display: contents */
+            } */
             .Description {
+                display: grid;
                 grid-column: 1 / 3;
 
             }
-
-
-            .Artwork {
-                grid-column: 3 / 7;
-            }
-            .Project:nth-of-type(2n) .Artwork{
-                grid-column: 1 / 5;
-            }
-            .Project:nth-of-type(2n) .Description {
-                grid-column: 5 / 7;
-            }
             
-        }
+        
 
         .Projects .inner-wrapper {
-            display: grid;
-         grid-template-columns: repeat(6, 1fr);
-         gap: 20px;
-        grid-auto-flow: dense;
         margin-bottom: 20px;
         }
     
@@ -510,9 +496,10 @@
                         Acting
                     </h2>
                 <div class="Project">
+                    <video controls="" src="pictures/CFA Promo.mp4" height="50%"></video>
                     <div class="Description">
-                        <h3>title of art</h3>
-                        <p>desciption</p>
+                        <h3>Chibi Frenzy All-Star Pixel Clash of Dreams</h3>
+                        <p>This was a game project made within lab week from some of my team members (Global Design) and thankfully I was able to helpout with it in Voice Acting as the announcer. ~Thank you: Aaron and Kotaro for coming to me and asking to be a part of this project!</p>
                     </div>
                     <div class="Artwork"></div>
                 </div>
@@ -532,26 +519,37 @@
                 </div>
                 <a id="Studio-Art" class="project-type-link"></a>
                 <h2 class="Project-Type-Title">
-                   <img src="" alt="">
+                    Studio Art
                 </h2>
                 <div class="Project">
+                    <img src="pictures/Camera (Studio Art).png" alt="3D Camera" height="500px" width="500px">
+                    <div class="Description">
+                        
+                        <h3>Polaroid Friendship</h3>
+                        <p>This art piece was made during my time in the art studio wanting to make something new. Which is how I came up with the idea of making this 3D camera that capture a moment with two friends. 
+                            I picked this idea because I believe cameras are used in our lives always and it allows people to captures moments that can last forever. 
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="Project">
+                    <!-- <img src="pictures/Painting (Studio Art).png" alt="Blue Women" height="400px" width="400px"> -->
                     <div class="Description">
                         <h3>title of art</h3>
                         <p>desciption</p>
                     </div>
-                    <div class="Artwork"></div>
-                </div>
-                <div class="Project">
-                    <div class="Description">
-                        <h3>title of art</h3>
-                        <p>desciption</p>
+                   
+                        <img src="pictures/Painting (Studio Art).png" alt="Blue Women" height="500px" width="400px" >
+                
                     </div>
-                    <div class="Artwork"></div>
-                </div>
                 <div class="Project">
+                    <img src="pictures/Watermelon.png" alt="Fruit" height="400px" width="500px"> 
                     <div class="Description">
-                        <h3>title of art</h3>
-                        <p>desciption</p>
+                        <h3>Recreation of: Viva la Vida</h3>
+                        <p>I gain this idea of recreating Viva la Vida by looking through past artist works and what they have done. This one cuaght my eye the most
+                            because it was created by Frida Kahlo and this was considered her very last art piece. I wanted to capture her idea of the painting and what it meant to her.
+                        Which was her love for life even through her struggles and Viva La Vida means "Long Live Life." 
+                    ~ Credit: Frida Kahlo </p>
                     </div>
                     <div class="Artwork"></div>
                 </div>

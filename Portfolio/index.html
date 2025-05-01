@@ -1,0 +1,226 @@
+<html> 
+    <style>
+        
+        :root {
+            --page-padding-left: 33px;
+        }
+        html { box-sizing: border-box; }
+        * { box-sizing: inherit; }
+        body {
+            margin:0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: #99BA99;
+            padding: 0px var(--page-padding-left)
+        }
+
+        header ul {
+            margin-bottom: 0;
+        }
+        .classname {
+            border: 1px solid red;
+        }
+
+        .paddingContainer {
+            padding: 40px var(--page-padding-left);
+        }
+
+        .paddingleft {
+            padding-left: 30px;
+        }
+        .paddingright {
+            padding-right: 50px;
+        }
+    
+        #SlideshowContainer {
+           color: aliceblue;
+            height: 447px;
+            width: 100%;
+            background-color: #364742;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Blackbox {
+            background-color: black; 
+            height: 8px; 
+            width: 100%;  
+        }
+        .Saharah-Introduction {
+            /* margin-top: 60px; */
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .BlackCube {
+            background-color: black; 
+            height: 25px; 
+            width: 100%; 
+        }
+        .inline50 {
+            border: 1px solid rgba(255, 0, 0, 0.256);
+            display: inline-block;
+            width: 49%;
+            box-sizing: border-box;
+        }
+        .infoArea {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            height:450px;
+        }
+        .interactiveArea {
+            display: flex;
+            /* grid-template-columns: repeat(2, 50%); */
+            background-color: rgba(18, 30, 42, 0.87);
+        }
+        .Dropdown {
+            height: 447px;
+            width: 50%;
+        }
+        .TextBox {
+            background-color:black ;
+            height: 181;
+            width: 325px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+            margin: 0%;
+            position:relative;
+            top:-140px;
+            left:-40px;
+            font-size: 23px;
+        }
+        .Design {
+            background-color: 7F636E;
+            height: 447px;
+            width: 85%;
+            margin: 15px;
+        }
+        @font-face {
+            font-family: header-text;
+            src: url(./fonts/KOMIKAX_.ttf);
+            font-weight: 700;
+        }
+        .Orange-Cube {
+            background-color: FFD498;
+            width: fit-content;
+            border-radius: 12px;
+            padding-inline: 8%;
+            padding-block: 2%;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-family: header-text;
+            font-size: 85%;
+        }
+        .photo {
+            background-color: CACAAA;
+            height: 512px;
+            width: 62%;
+            position:relative; 
+        }
+        
+    
+    </style>
+    <body>
+        <header>
+            <!-- home:image icon and anything else needed -->
+            <a href=""><h1>
+                <img width="9%" height="8%"  src="/Users/sortiz487@cable.comcast.com/Desktop/Logo.png" alt="Logo">
+                <!-- <img alt="Saharah Ortiz"/> -->
+            </h1></a> 
+            <ul>
+                <li><a href="/projects"></a></li>
+            </ul>
+        </header>
+        <!-- Body sections: slideshow photos and short discriptions -->
+         <section id="SlideshowContainer" class="paddingContainer">
+
+            <strong> slideshow</strong>
+        </section>
+        <div class="BlackCube">
+        </div>
+        <!-- About me -->
+        <section class="paddingContainer">
+            <div class="infoArea">
+                <div class="Saharah-Introduction">
+                    <section class="Orange-Cube">
+                    <ul>
+                    <a href="https://www.linkedin.com/in/saharah-ortiz-1a85b0259/" target="_blank">LinkedIn: Saharah Ortiz</a>
+                </ul>
+            </section>
+                    <h2 >Hello I'm Saharah</h2>
+                    <h3>Background information:</h3>
+                    <div></div>
+                    <p>I am an mixed cultural artist around many fields such as Studio Art, Graphic Design and Animation (GIFS). I also do many other things such as music, Photography, Modeling and different forms of acting. </p>
+                </div>
+                <div>
+                    <img/>
+                    <div>
+                    <!-- Contact Info -->
+                     <section><div class="photo">
+                     </div>
+                     <div class="padding-left">
+
+                     </div>
+                      <p class="TextBox" >
+                        <strong>Contact:
+                        ortizsaharah@gmail.com
+                    </p></strong>
+                    </section>
+                </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+        </section>
+        <!-- Other links -->
+         <section></section>
+        <div class="Blackbox">
+        </div>
+        <div class="interactiveArea">
+        <section class="Dropdown">
+            <select name="Portffolio-Category" id="Portffolio-Category">
+                
+                <option value="art">Art
+                    
+                </option>
+                <option value="music">Music
+                
+
+                </option>
+                <option value="acting">
+                    Acting
+                </option>
+            </select>
+            <div class="Design">
+            </div>
+            </div>
+            <Div class="Blackbox">
+
+            </Div>
+
+            <!-- <a href="/">Art</a>
+            <ul>
+                <li>
+                    <a href="/">Art</a>
+                </li>
+                <li>
+                    <a href="/">Music</a>
+                </li>
+                <li>
+                    <a href="/">Acting</a>
+                </li>
+            </ul> -->
+
+        </section>
+</div>
+    </body>
+</html>
+
+<!-- 
+-Saharah Ortiz
+    -Hello I'm Saharah
+        -Contact
+    -Other links
+ -->
